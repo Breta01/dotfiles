@@ -8,11 +8,11 @@ alias tkill='tmux kill-session -t'
 alias et='vi ~/../usr/etc/tmux.conf'
 alias ez='vi ~/.zshrc'
 alias ea='vi ~/.oh-my-zsh/lib/alias.zsh'
-alias ev='vi ~/../usr/share/vim'
+alias ev='vi ~/../usr/share/vim/vimrc'
 
 #Workflow
 alias pro='cd ~/storage/shared/Projects'
 
 #Backup (bu) dot files
 alias createbu='cp ~/../usr/share/vim/vimrc ~/dotfiles/vimrc_bu; cp ~/.zshrc ~/dotfiles/zshrc_bu; cp ~/.oh-my-zsh/lib/alias.zsh ~/dotfiles/alias_bu.zsh; cp ~/../usr/etc/tmux.conf ~/dotfiles/tmux_bu.conf'
-alias pushbu='cd ~/dotfiles && ! git commit -a -m "commit" && git push'
+alias pushbu='cd ~/dotfiles && git add -A && git commit -m "auto backup" && git push; cd -'
