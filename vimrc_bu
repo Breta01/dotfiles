@@ -16,6 +16,7 @@ set showmatch
 set wildmenu " Tab completion in vim comand
 
 " Can add neocomplete for autocomplation
+
 " Chang Leader key
 let mapleader=","
 
@@ -47,6 +48,9 @@ highlight ExtraWhitespace ctermfg=167 cterm=underline
 match ExtraWhitespace /\s\+$\| \+\ze\t/
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 
+" NERDTree on ctrl+n
+map <silent> <C-n> :NERDTreeToggle<CR>
+
 " Show tabs
 set list
 set listchars=tab:\¦\ ,eol:\ ,
@@ -61,3 +65,9 @@ let g:syntastic_auto_loc_list=0 " :lopen / :lclose for controling error window
 let g:syntastic_check_on_open=0
 let g:syntastic_check_on_wq=0
 let g:syntastic_python_checkers=['pylint']
+let g:syntasitc_javascript_checkers=['eslint']
+
+let g:syntastic_warning_symbol='Δ'
+let g:syntastic_error_symbol='✖'
+
+nnoremap <leader>sy :SyntasticCheck<CR>
