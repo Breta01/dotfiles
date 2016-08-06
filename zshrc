@@ -11,7 +11,7 @@ ZSH_THEME="strug"
 setopt RM_STAR_WAIT
 setopt interactivecomments
 setopt CORRECT
-export EDITOR="vim"
+export EDITOR="vi"
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
